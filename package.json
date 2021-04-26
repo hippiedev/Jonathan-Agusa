@@ -1,0 +1,37 @@
+{
+  "name": "jonathan-agusa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "jonathan agusa",
+  "author": "Jonathan Agusa",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby": "^3.3.1",
+    "gatsby-plugin-image": "^1.3.1",
+    "gatsby-plugin-manifest": "^3.3.0",
+    "gatsby-plugin-mdx": "^2.3.0",
+    "gatsby-plugin-netlify-cms": "^5.3.0",
+    "gatsby-plugin-react-helmet": "^4.3.0",
+    "gatsby-plugin-sass": "^4.3.0",
+    "gatsby-plugin-sharp": "^3.3.1",
+    "gatsby-source-filesystem": "^3.3.0",
+    "gatsby-transformer-remark": "^4.0.0",
+    "gatsby-transformer-sharp": "^3.3.0",
+    "netlify-cms-app": "^2.14.46",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "sass": "^1.32.11"
+  }
+}
