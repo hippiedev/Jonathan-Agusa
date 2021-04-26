@@ -3,7 +3,7 @@
     font-family: 'Righteous';
     position: relative;
     clear: both;
-    top: 100px;
+    top: 400px;
     width: 82%;
     height: fit-content;
     margin: 0 auto;
@@ -36,8 +36,9 @@
 }
 @media(min-width: 760px) {
     .Footer {
-        top: 55%;
+        top: 350px;
         margin-top: 60px;
+        padding-bottom: 0;
     }
     .Footer ul li {
         margin-right: 60px;

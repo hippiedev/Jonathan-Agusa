@@ -3,7 +3,8 @@
 .content_wrap {
   width: 100%;
   font-size: 22px;
-  height: 53vh;
+  height: fit-content;
+  margin-bottom: 43vh;
 }
 .content_wrap div {
   margin-left: 10%;
@@ -16,6 +17,9 @@
   margin-bottom: 20px;
 }
 @media (min-width: 760px) {
+  .content_wrap {
+    margin-bottom: 0;
+  }
   .content_wrap div {
     margin-left: 7%;
     top: 100px;

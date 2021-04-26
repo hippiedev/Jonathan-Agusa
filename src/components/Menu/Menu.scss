@@ -158,6 +158,10 @@ header {
   font-size: 3rem;
   margin-bottom: 30px;
 }
+a {
+  text-decoration: none;
+  color: currentColor;
+}
 @keyframes backgroundEffect {
   0% {
     background-position: 0% 0%;

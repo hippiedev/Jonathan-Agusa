@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.Archive {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    top: 30px;
+}
+.Archive h3 {
+    font-family: 'Righteous';
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.Archive span {
+    color: rgb(0, 255, 255);
+    font-family: 'Righteous';
+    font-size: 14px;
+}
+.Archive p {
+    color: #fff;
+    font-family: 'Open Sans';
+    margin-top: 10px;
+    position: relative;
+    line-height: 25px;
+}
+.ArchivePost {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-left: 1px solid rgb(0, 255, 255);
+    border-top: 1px solid rgb(0, 255, 255);
+    position: relative;
+}
+
+@media(min-width: 760px){
+    .Archive {
+        width: 60%;
+    }
+    .Archive h3 {
+        font-size: 24px;
+    }
+    .Archive p {
+        line-height: 28px;
+    }
+    .Post {
+        margin-bottom: 60px;
+    }
+}

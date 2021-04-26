@@ -1,0 +1,35 @@
+.Post {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    top: 30px;
+}
+.Post h1 {
+    font-family: 'Righteous';
+    font-weight: normal;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.Post span {
+    color: rgb(0, 255, 255);
+    font-family: 'Righteous';
+    padding: 20px 0px;
+}
+.Content {
+    font-family: 'Open Sans';
+    line-height: 25px;
+    margin-top: 45px;
+}
+@media (min-width: 760px) {
+    .Post {
+        width: 60%;
+    }
+    .Post h1 {
+        font-size: 54px;
+    }
+    .Content {
+        line-height: 28px;
+        margin-top: 60px;
+    }
+}
