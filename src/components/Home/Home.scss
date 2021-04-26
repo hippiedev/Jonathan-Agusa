@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+.content_wrap {
+  width: 100%;
+  font-size: 22px;
+  height: 53vh;
+}
+.content_wrap div {
+  margin-left: 10%;
+  position: relative;
+  top: 80px;
+  width: 70%;
+}
+.content_wrap div p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+@media (min-width: 760px) {
+  .content_wrap div {
+    margin-left: 7%;
+    top: 100px;
+  }
+}

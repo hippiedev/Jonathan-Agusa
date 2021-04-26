@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.Footer {
+    font-family: 'Righteous';
+    position: relative;
+    clear: both;
+    top: 100px;
+    width: 82%;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.Footer ul{
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+    position: relative;
+    left: 25px;
+}
+.Footer ul li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 50px;
+    color: rgb(0, 255, 255); 
+}
+.Footer ul li:nth-child(4){
+    margin-right: none;
+}
+.Footer p {
+    font-size: 13px;
+    text-align: center;
+}
+@media(min-width: 760px) {
+    .Footer {
+        top: 55%;
+        margin-top: 60px;
+    }
+    .Footer ul li {
+        margin-right: 60px;
+    }
+}

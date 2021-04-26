@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.Header {
+  background: #000;
+  width: 100%;
+  color: #fff;
+  padding: 50px 0px;
+  font-family: "Righteous";
+}
+.Logo {
+  margin-left: 10%;
+  float: left;
+  z-index: 100;
+  position: relative;
+  font-size: 22px;
+  transition: color 0.8s ease-in-out;
+}
+
+.BurgerMenu {
+  float: right;
+  margin-right: 10%;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: 'Righteous';
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  z-index: 100;
+  position: relative;
+  top: 10px;
+  transition: color 0.8s ease-in-out;
+}
+
+@media(min-width: 760px) {
+  .Logo {
+    margin-left: 7%;
+  }
+  .BurgerMenu {
+    margin-right: 7%;
+  }
+}
