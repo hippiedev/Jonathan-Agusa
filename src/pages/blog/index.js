@@ -20,6 +20,7 @@ export default function Template({ data }) {
           
             <h3>{post.frontmatter.title}</h3>
             <span>{post.frontmatter.date}</span>
+            <p>{post.frontmatter.description}</p>
           
         </Link>
         </div>
@@ -39,6 +40,7 @@ export const postQuery = graphql`
           date
           path
           title
+          description
         }
         id
       }

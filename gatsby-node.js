@@ -13,6 +13,7 @@ exports.createPages = ({ actions, graphql }) => {
             date
             path
             title
+            description
           }
           html
           id
