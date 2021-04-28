@@ -38,12 +38,12 @@ export default function Template({ data }) {
 
 export const postQuery = graphql`
 query BlogPage {
-  allMarkdownRemark {
+  allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
     nodes {
+      id
       frontmatter {
         date(fromNow: true)
         description
-        title
         path
         thumb {
           childImageSharp {
@@ -52,10 +52,11 @@ query BlogPage {
             }
           }
         }
+        title
       }
-      id
     }
   }
 }
+
 
 `;
