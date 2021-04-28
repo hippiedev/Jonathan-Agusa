@@ -12,12 +12,18 @@ export default function postTemplate({ data }) {
   return (
     <div>
       <Helmet>
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={post.frontmatter.title} />
-        <meta name="twitter:description" content={post.frontmatter.description} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.frontmatter.title} />
+        <meta
+          name="twitter:description"
+          content={post.frontmatter.description}
+        />
         <meta name="twitter:image" content={image} />
-      <meta property="og:title" content={post.frontmatter.title} />
-        <meta property="og:description" content={post.frontmatter.description} />
+        <meta property="og:title" content={post.frontmatter.title} />
+        <meta
+          property="og:description"
+          content={post.frontmatter.description}
+        />
         <meta property="og:image" content={image} />
         <meta property="og:type" content="article" />
         <meta name="image" content={image} />
