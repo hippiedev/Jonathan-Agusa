@@ -9,14 +9,28 @@ exports.createPages = ({ actions, graphql }) => {
     allMarkdownRemark {
       edges {
         node {
-          frontmatter {
-            date
-            path
-            title
-            description
-          }
           html
           id
+          frontmatter {
+            date(fromNow: true)
+            description
+            path
+            title
+            featuredImg {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            thumb {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+          }
         }
       }
     }

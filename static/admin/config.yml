@@ -1,9 +1,8 @@
 backend:
-  name: github
-  repo: hippiedev/Jonathan-Agusa
+  name: git-gateway
   branch: main
 media_folder: static/assets
-public_folder: /assets
+public_folder: /src/images/featured
 collections:
   - name: blog
     label: Blog
@@ -13,4 +12,10 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime, format: MMM DD YYYY }
       - { name: title, label: Title }
+      - {name: description, label: Description}
+      - {
+        label: "Featured Image",
+         name: "thumb", 
+         widget: "image"
+        }
       - { name: body, label: Body, widget: markdown }

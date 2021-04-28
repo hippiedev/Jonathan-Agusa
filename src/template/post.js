@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import "../styles/Post.scss";
 import Helmet from 'react-helmet';
+import Img from 'gatsby-image';
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
@@ -16,6 +17,7 @@ export default function postTemplate({ data }) {
       <div className="Post">
         <h1>{post.frontmatter.title}</h1>
         <span>{post.frontmatter.date}</span>
+        <Img style={{position: "relative", marginTop: "20px", height: "250px"}} fluid={post.frontmatter.thumb.childImageSharp.fluid} />
         <div
           className="Content"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -33,8 +35,17 @@ export const postTemplateQuery = graphql`
       frontmatter {
         path
         title
-        date
+        date(fromNow: true)
+        thumb {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
+      id
     }
   }
+
 `;
