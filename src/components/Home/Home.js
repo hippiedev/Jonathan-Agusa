@@ -23,7 +23,7 @@ function Home() {
           </p>
           <p ref={(el) => (textElem2 = el)}>
             I am a{" "}
-            <span style={{ color: "rgb(0, 255, 255)" }}>software engineer</span>
+            <span style={{ color: "rgb(0, 255, 255)" }}>frontend engineer</span>
             .
           </p>
         </div>
