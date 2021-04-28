@@ -1,16 +1,16 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: static/assets
-public_folder: /src/images/featured
+media_folder: ../../images/featured
+public_folder: ../../images/featured
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/blog
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime, format: MMM DD YYYY }
+      - { name: date, label: Date, widget: datetime}
       - { name: title, label: Title }
       - {name: description, label: Description}
       - {
