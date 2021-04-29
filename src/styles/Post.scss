@@ -18,8 +18,12 @@
 }
 .Content {
     font-family: 'Open Sans';
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 28px;
     margin-top: 45px;
+}
+.Content h1 {
+    font-family: 'Righteous';
 }
 @media (min-width: 760px) {
     .Post {

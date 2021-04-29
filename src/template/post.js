@@ -8,7 +8,8 @@ import Footer from "../components/Footer/Footer";
 
 export default function postTemplate({ data }) {
   const { markdownRemark: post } = data;
-  const image = <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />;
+  const image =  '../images/' + post.frontmatter.thumb.relativePath
+  console.log(typeof image)
   return (
     <div>
       <Helmet>
@@ -63,10 +64,12 @@ export const postTemplateQuery = graphql`
         date(fromNow: true)
         thumb {
           childImageSharp {
+            id
             fluid {
               ...GatsbyImageSharpFluid
             }
           }
+          relativePath
         }
       }
       id

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import {Link} from 'gatsby';
 import "./Header.scss";
 import Menu from "../Menu/Menu";
 import { textIntro } from "../Animate";
@@ -64,7 +65,7 @@ function Header({ history }) {
           }
           className="Logo"
         >
-          AJ
+          <Link to="/">AJ</Link>
         </div>
         <button
           style={

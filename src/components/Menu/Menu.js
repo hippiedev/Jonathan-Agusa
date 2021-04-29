@@ -46,7 +46,7 @@ function Menu({ state }) {
             <ul>
               <li ref={(el) => (line1 = el)}>About</li>
               <Link to="/blog" ><li ref={(el) => (line2 = el)}>Blog</li></Link>
-              <li ref={(el) => (line3 = el)}>Contact</li>
+              <Link to="/contact"><li ref={(el) => (line3 = el)}>Contact</li></Link>
             </ul>
           </nav>
         </div>

@@ -3,9 +3,9 @@ import Home from "../components/Home/Home";
 
 const IndexPage = () => {
   return (
-    <div>
+    <React.Fragment>
       <Home />
-    </div>
+    </React.Fragment>
   );
 };
 

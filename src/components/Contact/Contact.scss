@@ -1,0 +1,49 @@
+$primary: rgb(0, 255, 255);
+
+.Contact {
+    width: 80%;
+    margin: 0 auto;
+    height: fit-content;
+    position: relative;
+    top: 20px;
+}
+.Contact img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    transition: 0.3;
+}
+.ContactContent {
+    display: block;
+    margin-top: 30px;
+}
+.ContactContent h2 {
+    font-weight: normal;
+    margin: 20px 0px;
+    color: $primary;
+}
+.ContactContent p {
+    font-family: 'Open Sans';
+    line-height: 28px;
+}
+.ContactContent span {
+    border-bottom: 1px solid $primary;
+    padding-bottom: 0px;
+}
+
+@media(min-width: 760px) {
+    .Contact {
+        width: 70%;
+    }
+    .Contact img {
+        width: 40%;
+        height: 300px;
+        margin-right: 10%;
+        display: inline-block;
+    }
+    .ContactContent {
+        display: inline-block;
+        width: 50%;
+        position: absolute;
+    }
+}
