@@ -6,6 +6,10 @@ body {
   background: #000;
   color: #fff;
 }
+::selection {
+  background: rgb(0, 255, 255);
+  color: #000;
+}
 .Layout {
   color: #fff;
   font-family: "Righteous";

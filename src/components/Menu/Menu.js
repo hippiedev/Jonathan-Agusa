@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { menuShow, menuHide, staggerLinks } from "../Animate";
-import"./Menu.scss";
+import "./Menu.scss";
 import { Link } from "gatsby";
 
 function Menu({ state }) {
@@ -39,14 +39,20 @@ function Menu({ state }) {
 
   return (
     <div ref={(el) => (menuWrapper = el)} className="hamburgerMenu">
-      <div ref={(el) => (show1 = el)} className="menuBackground" ></div>
-      <div ref={(el) => (show2 = el)} className="menuLayer" >
+      <div ref={(el) => (show1 = el)} className="menuBackground"></div>
+      <div ref={(el) => (show2 = el)} className="menuLayer">
         <div className="menuLinks">
           <nav>
             <ul>
-              <li ref={(el) => (line1 = el)}>About</li>
-              <Link to="/blog" ><li ref={(el) => (line2 = el)}>Blog</li></Link>
-              <Link to="/contact"><li ref={(el) => (line3 = el)}>Contact</li></Link>
+              <Link to="/about">
+                <li ref={(el) => (line1 = el)}>About</li>
+              </Link>
+              <Link to="/blog">
+                <li ref={(el) => (line2 = el)}>Blog</li>
+              </Link>
+              <Link to="/contact">
+                <li ref={(el) => (line3 = el)}>Contact</li>
+              </Link>
             </ul>
           </nav>
         </div>

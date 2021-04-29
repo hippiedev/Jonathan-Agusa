@@ -1,12 +1,12 @@
-import React from 'react';
-import Contact from '../components/Contact/Contact';
+import React from "react";
+import Contact from "../components/Contact/Contact";
 
 function contact() {
-    return (
-        <div>
-            <Contact />
-        </div>
-    )
+  return (
+    <React.Fragment>
+      <Contact />
+    </React.Fragment>
+  );
 }
 
-export default contact
+export default contact;

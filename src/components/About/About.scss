@@ -1,0 +1,55 @@
+$primary: rgb(0, 255, 255);
+.About {
+    width: 80%;
+    margin: 0 auto;
+}
+.About .quote {
+    height: fit-content;
+    width: 100%;
+}
+.About .quote p:first-child {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.About .quote p:nth-child(2) {
+    color: $primary;
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+.AboutContent{
+    margin-top: 30px;
+}
+.AboutContent h2 {
+    font-weight: normal;
+    color: $primary;
+}
+.AboutContent ul {
+    margin-top: 20px;
+    width: 70%;
+}
+.AboutContent ul li {
+    display: inline-block;
+    border: 1px solid $primary;
+    padding: 10px;
+    font-family: 'Open Sans';
+    text-transform: capitalize;
+}
+.AboutContent p {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    margin-top: 50px;
+    line-height: 30px;
+}
+.About p span#quote{
+    color: $primary;
+    font-size: 4rem;
+    position: relative;
+    top: 20px;
+}
+
+@media(min-width: 760px) {
+    .About {
+        width: 70%;
+    }
+}
