@@ -41,7 +41,7 @@ function About() {
             <li>Framer Motion</li>
             
         </ul>
-        <p>I love learning new things always because it's the only way I get to create nicer and fancier things with my computer. I am a UI/UX enthusiasr. I am interested in innovation and start-ups. I am also very interested in politics, physics, philosophy, psychology and <span>world domination</span>.</p>
+        <p>I love learning new things always because it's the only way I get to create nicer and fancier things with my computer. I am a UI/UX enthusiast. I am interested in innovation and start-ups. I am also very interested in politics, physics, philosophy, psychology and <span>world domination</span>.</p>
         </div>
       </div>
     </Layout>
