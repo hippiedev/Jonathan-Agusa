@@ -157,6 +157,12 @@ header {
   list-style: none;
   font-size: 3rem;
   margin-bottom: 30px;
+  filter: blur(1.5px);
+  color: rgba(0, 0, 0, 0.45);
+}
+.menuLinks ul .active li {
+  filter: blur(0px);
+  color: #000;
 }
 a {
   text-decoration: none;

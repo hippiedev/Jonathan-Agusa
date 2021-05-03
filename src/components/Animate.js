@@ -69,3 +69,13 @@ export const menuShow = (elem1, elem2) => {
       ease: "ease-in"
     })
   }
+
+  export const aboutIntro = (elem) => {
+    gsap.from (elem, {
+      y: -10,
+      opacity: 0,
+      duration: 0.8,
+      ease: "ease-in",
+      delay: 3.5,
+    })
+  }

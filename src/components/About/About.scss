@@ -33,13 +33,20 @@ $primary: rgb(0, 255, 255);
     border: 1px solid $primary;
     padding: 10px;
     font-family: 'Open Sans';
+    color: #fff;
     text-transform: capitalize;
+}
+.About ul li i {
+    color: $primary;
 }
 .AboutContent p {
     font-family: 'Open Sans';
     font-size: 18px;
     margin-top: 50px;
     line-height: 30px;
+}
+.AboutContent span {
+    color: $primary;
 }
 .About p span#quote{
     color: $primary;

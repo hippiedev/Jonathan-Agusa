@@ -44,13 +44,16 @@ function Menu({ state }) {
         <div className="menuLinks">
           <nav>
             <ul>
-              <Link to="/about">
+            <Link activeClassName="active" to="/">
+                <li ref={(el) => (line1 = el)}>Home</li>
+              </Link>
+              <Link activeClassName="active" to="/about">
                 <li ref={(el) => (line1 = el)}>About</li>
               </Link>
-              <Link to="/blog">
+              <Link activeClassName="active" to="/blog">
                 <li ref={(el) => (line2 = el)}>Blog</li>
               </Link>
-              <Link to="/contact">
+              <Link activeClassName="active" to="/contact">
                 <li ref={(el) => (line3 = el)}>Contact</li>
               </Link>
             </ul>
