@@ -31,9 +31,9 @@ function About() {
             <li>Python <i className="fab fa-python" /></li>
             <li>React <i className="fab fa-react" /></li>
             <li>Wordpress <i className="fa fa-wordpress" /></li>
-            <li>Gatsby <i className="fab fa-react" /></li>
+            <li>Git <i className="fab fa-git-alt" /></li> 
+            <li>Gatsby</li>
             <li>Netlify</li>
-            <li>Git <i className="fab fa-git-alt" /></li>
             <li>Firebase</li>
             <li>Redux</li>
             <li>GraphQL</li>

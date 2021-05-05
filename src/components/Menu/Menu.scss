@@ -160,12 +160,11 @@ header {
 }
 .menuLinks ul .active li::after {
   content:"\2716";
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
-  padding-left: 0px;
   position: relative;
   left: 10px;
-  top: -4px;
+  top: -6.5px;
   color: #000;
 }
 a {
@@ -187,5 +186,13 @@ a {
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+@media (min-width: 760px) {
+  .menuLinks ul .active li::after {
+    font-size: 1.5rem;
+    font-weight: bold;
+    left: 10px;
+  top: -4px;
   }
 }

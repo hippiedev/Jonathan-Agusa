@@ -8,8 +8,7 @@ import Footer from "../components/Footer/Footer";
 
 export default function postTemplate({ data }) {
   const { markdownRemark: post } = data;
-  const image =  '../images/' + post.frontmatter.thumb.relativePath
-  console.log(typeof image)
+  const image = "../images/" + post.frontmatter.thumb.relativePath;
   return (
     <div>
       <Helmet>
@@ -26,6 +25,9 @@ export default function postTemplate({ data }) {
           content={post.frontmatter.description}
         />
         <meta property="og:image" content={image} />
+        <meta property="og:image:width" content="180" />
+
+        <meta property="og:image:height" content="110" />
         <meta property="og:type" content="article" />
         <meta name="image" content={image} />
         <meta name="description" content={post.frontmatter.description} />

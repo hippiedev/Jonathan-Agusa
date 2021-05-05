@@ -76,6 +76,6 @@ export const menuShow = (elem1, elem2) => {
       opacity: 0,
       duration: 0.8,
       ease: "ease-in",
-      delay: 3.5,
+      delay: 2.5,
     })
   }
