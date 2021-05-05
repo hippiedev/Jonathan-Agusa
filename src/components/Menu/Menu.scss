@@ -157,12 +157,15 @@ header {
   list-style: none;
   font-size: 3rem;
   margin-bottom: 30px;
-  filter: blur(1.2px);
-  color: rgba(0, 0, 0, 0.45);
 }
-.menuLinks ul .active li {
-  filter: blur(0px);
-  color: #000;
+.menuLinks ul .active li::after {
+  content:"\2716";
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 0px;
+  position: relative;
+  left: 10px;
+  top: -4px;
 }
 a {
   text-decoration: none;

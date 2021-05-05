@@ -22,6 +22,9 @@
   line-height: 28px;
   margin-top: 45px;
 }
+.Content p {
+  margin-bottom: 30px;
+}
 .Content h1,
 h2,
 h3,
@@ -30,7 +33,9 @@ h5,
 h6 {
   font-family: "Righteous";
   font-weight: normal;
+  padding-bottom: 10px;
 }
+
 @media (min-width: 760px) {
   .Post {
     width: 60%;

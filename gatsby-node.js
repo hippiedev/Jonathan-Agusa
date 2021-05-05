@@ -16,13 +16,6 @@ exports.createPages = ({ actions, graphql }) => {
             description
             path
             title
-            featuredImg {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
-            }
             thumb {
               childImageSharp {
                 fluid {
