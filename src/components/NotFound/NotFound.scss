@@ -1,0 +1,23 @@
+.NotFound {
+    height: 50vh;
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+.NotFound img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+.NotFound .NotFoundContent {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.NotFound .NotFoundContent div {
+    border-bottom: 2px solid rgb(0, 255, 255);
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}

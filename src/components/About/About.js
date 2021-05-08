@@ -17,10 +17,9 @@ function About() {
       <div className="About">
           <div ref={(el) => (elem = el)} className="quote">
         <p>
-          <span id="quote">"</span><br />Intellectual growth should commence at birth
-          and cease only at death.<br />
+          <span id="quote">"</span><br />Up Is A Relative Construct. It Has No Intrinsic Value.<br />
         </p>
-        <p>- Albert Einstein</p>
+        <p>- Dr. Manhattan</p>
         </div>
         <div ref={(el) => (elem1 = el)} className="AboutContent">
         <h2>Tools and Technologies</h2>
