@@ -12,3 +12,18 @@ Man has always been searching for ways to make life easier for himself. That des
 ### The flaws
 
 the flaws can be seen all around. People are getting left behind. Bias is winning the market. It's crazy out here.
+
+```html
+<html>
+<head>
+<title>Hello There</title>
+</head>
+
+<body>
+<div>Hello there you!</div>
+</body>
+
+
+
+</html>
+```
