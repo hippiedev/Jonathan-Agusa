@@ -8,6 +8,8 @@ function Layout({ children }) {
     return (
         <div className="Layout" >
         <Helmet>
+        <title>Jonathan</title>
+        <meta name="description" content="My name is Jonathan Agusa and this is my portfolio site" />
         <script src="https://kit.fontawesome.com/8c8a5b4cb9.js" crossorigin="anonymous"></script>
         </Helmet>
            <Header /> 
