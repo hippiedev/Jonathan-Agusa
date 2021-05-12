@@ -20,7 +20,7 @@ export default function Template({ data }) {
       <Helmet>
         <script src="https://kit.fontawesome.com/8c8a5b4cb9.js" crossorigin="anonymous"></script>
         </Helmet>
-      <Header/>
+      <Header />
       <div className="Archive"  ref={(el) => (elem = el)} >
       {blogPost.map((post) => (
         <div className="ArchivePost" key={post.id}>
@@ -38,7 +38,7 @@ export default function Template({ data }) {
         </div>
       ))}
       </div>
-      <Footer />
+      <Footer top="200px" />
     </div>
   );
 }

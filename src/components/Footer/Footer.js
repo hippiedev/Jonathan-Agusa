@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./Footer.scss";
 import { linkIntro } from "../Animate";
 
-function Footer() {
+function Footer(props) {
   let myElement1 = useRef(null);
   let myElement2 = useRef(null);
   let myElement3 = useRef(null);
@@ -13,7 +13,7 @@ function Footer() {
   }, []);
 
   return (
-    <div className="Footer">
+    <div style={{position: 'relative', top: props.top}} className="Footer">
       <ul>
         <a href="https://twitter.com/agusajonathan">
           <li ref={(el) => (myElement1 = el)}>

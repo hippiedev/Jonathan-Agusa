@@ -1,0 +1,32 @@
+$primary: rgb(0, 255, 255);
+.circle {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    float: right;
+    filter: url(#wavy) blur(1px);
+    display: none;
+}
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 22%;
+    left: 38%;
+    right: 38%;
+    bottom: 22%;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px $primary,
+                inset 0 0 20px $primary;
+}
+svg {
+    width: 0;
+    height: 0;
+
+}
+
+@media (min-width: 760px) {
+    .circle {
+        display: inline-block;
+    }
+}

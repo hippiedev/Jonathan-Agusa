@@ -13,7 +13,7 @@ function About() {
   }, []);
 
   return (
-    <Layout>
+    <Layout top="100px">
       <div className="About">
           <div ref={(el) => (elem = el)} className="quote">
         <p>

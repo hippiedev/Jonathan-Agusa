@@ -11,7 +11,7 @@ function Contact() {
       postIntro(elem);
     }, []);
   return (
-    <Layout>
+    <Layout top="120px">
       <div className="Contact" ref={(el) => (elem = el)}>
         <img src={contactImage} alt="Dr Manhattan" />
         <div className="ContactContent">

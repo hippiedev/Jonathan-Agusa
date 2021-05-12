@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { textIntro } from "../Animate";
+import Circle from '../RingAnimation/Circle';
 import Layout from '../Layout/Layout';
 import "./Home.scss";
 
@@ -27,7 +28,7 @@ function Home() {
             .
           </p>
         </div>
-        
+        <Circle />
       </div>
       </Layout>
   );

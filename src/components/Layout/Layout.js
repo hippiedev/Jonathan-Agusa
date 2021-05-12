@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import image from '../../images/manhattan.jpg';
 
-function Layout({ children }) {
+function Layout(props) {
     let description = "My name is Jonathan Agusa and this is my portfolio site";
     let title = "Jonathan"; 
     return (
@@ -26,9 +26,9 @@ function Layout({ children }) {
           content={description} />
         <script src="https://kit.fontawesome.com/8c8a5b4cb9.js" crossorigin="anonymous"></script>
         </Helmet>
-           <Header /> 
-           {children}
-           <Footer />
+           <Header/> 
+           {props.children}
+           <Footer top={props.top} />
         </div>
     )
 }
