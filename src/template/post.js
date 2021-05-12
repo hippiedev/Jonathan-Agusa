@@ -9,7 +9,7 @@ import Footer from "../components/Footer/Footer";
 export default function postTemplate({ data }) {
   const rootUrl = 'https://nathanagusa.netlify.app';
   const { markdownRemark: post } = data;
-  const image = `${rootUrl}${post.frontmatter.featuredImage.childImageSharp.fluid.src}`;
+  const image = `${rootUrl}${post.frontmatter.thumb.childImageSharp.fluid.src}`;
   return (
     <React.Fragment>
       <Header />
