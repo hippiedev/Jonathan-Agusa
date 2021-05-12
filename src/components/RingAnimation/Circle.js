@@ -17,7 +17,7 @@ function Circle(props) {
     <React.Fragment>
       <div
         ref={(el) => (elem = el)}
-        style={{ position: "relative", top: "-70px"}}
+        style={{ position: "relative", top: "-70px", left: "15%" }}
         className="circle"
       ></div>
       <svg>
