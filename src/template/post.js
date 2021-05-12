@@ -5,8 +5,14 @@ import Helmet from "react-helmet";
 import Img from "gatsby-image";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+
+
 
 export default function postTemplate({ data }) {
+
+  deckDeckGoHighlightElement();
+
   const { markdownRemark: post } = data;
   const image = "../images/" + post.frontmatter.thumb.relativePath;
   return (
