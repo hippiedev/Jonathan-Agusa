@@ -14,7 +14,7 @@ export default function postTemplate({ data }) {
     <React.Fragment>
       <Header />
       <Helmet>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta
           name="twitter:description"
