@@ -1,18 +1,18 @@
 $primary: rgb(0, 255, 255);
 .circle {
     position: relative;
+    left: 28%;
     width: 600px;
     height: 400px;
     float: right;
     filter: url(#wavy) blur(1px);
-    display: none;
 }
 .circle::before {
     content: '';
     position: absolute;
     top: 22%;
-    left: 38%;
-    right: 38%;
+    left: 20%;
+    right: 20%;
     bottom: 22%;
     border: 10px solid #fff;
     border-radius: 50%;
@@ -27,6 +27,10 @@ svg {
 
 @media (min-width: 760px) {
     .circle {
-        display: inline-block;
+        left: 15%;
+    }
+    .circle::before {
+        left: 38%;
+        right: 38%;
     }
 }

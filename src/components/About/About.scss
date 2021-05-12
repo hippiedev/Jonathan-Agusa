@@ -42,11 +42,16 @@ $primary: rgb(0, 255, 255);
 .AboutContent p {
     font-family: 'Open Sans';
     font-size: 18px;
-    margin-top: 50px;
+    margin-top: 20px;
     line-height: 30px;
 }
 .AboutContent span {
     color: $primary;
+}
+span#link{
+    color: currentColor;
+    border-bottom: 2px solid $primary;
+    cursor: pointer;
 }
 .About p span#quote{
     color: $primary;

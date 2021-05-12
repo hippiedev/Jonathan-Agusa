@@ -7,7 +7,6 @@ function Circle(props) {
 
   useEffect(() => {
       gsap.from(elem, {
-        y: -10,
         opacity: 0,
         duration: 1.5,
         ease: "ease-in",
@@ -18,7 +17,7 @@ function Circle(props) {
     <React.Fragment>
       <div
         ref={(el) => (elem = el)}
-        style={{ position: "relative", top: "-30px", left: "15%" }}
+        style={{ position: "relative", top: "-70px"}}
         className="circle"
       ></div>
       <svg>

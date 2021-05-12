@@ -40,7 +40,10 @@ function About() {
             <li>Framer Motion</li>
             
         </ul>
-        <p>I love learning new things always because it's the only way I get to create nicer and fancier things with my computer. I am a UI/UX enthusiast. I am interested in innovation and start-ups. I am also very interested in politics, physics, philosophy, psychology and <span>world domination</span>.</p>
+        <br/>
+        <br/>
+        <p>Check out my <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1Sos4sNx4X-gvVAo5HAdIlIDT_A1bL3Fc/view?usp=sharing"><span id="link">resume</span></a></p>
+        <p>I love learning new things always because it's the only way I get to create nicer and fancier things with my computer. I am a UI/UX enthusiast. I am interested in innovation and start-ups. I am also interested in philosophy, psychology and <span>world domination</span>.</p>
         </div>
       </div>
     </Layout>

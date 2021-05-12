@@ -3,11 +3,13 @@ import Helmet from 'react-helmet';
 import './Layout.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import image from '../../images/manhattan.jpg';
+import metaImage from '../../images/manhattan.jpg';
 
 function Layout(props) {
-    let description = "My name is Jonathan Agusa and this is my portfolio site";
-    let title = "Jonathan"; 
+    let description = props.description ? props.description : "My name is Jonathan Agusa and this is my portfolio site";
+    let title = props.title ? props.title : "Jonathan";
+    let image = props.image ? props.image : metaImage;
+    
     return (
         <div className="Layout" >
         <Helmet>
