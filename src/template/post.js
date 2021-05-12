@@ -5,18 +5,16 @@ import Helmet from "react-helmet";
 import Img from "gatsby-image";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 
 export default function postTemplate({ data }) {
-  deckDeckGoHighlightElement();
-
+  const rootUrl = 'https://nathanagusa.netlify.app';
   const { markdownRemark: post } = data;
-  const image = "../images/" + post.frontmatter.thumb.relativePath;
+  const image = `${rootUrl}${post.frontmatter.featuredImage.childImageSharp.fluid.src}`;
   return (
     <React.Fragment>
       <Header />
       <Helmet>
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta
           name="twitter:description"
@@ -73,6 +71,7 @@ export const postTemplateQuery = graphql`
             id
             fluid {
               ...GatsbyImageSharpFluid
+              src
             }
           }
           relativePath
