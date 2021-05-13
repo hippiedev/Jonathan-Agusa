@@ -20,6 +20,6 @@ useEffects takes in two arguments:
 useEffect(callback, [dependencies]);
 ```
 
-* `callback` is the callback function containing the side-effect logic. `useEffect` executes the callback function after React has committed the changes to the screen.
+`callback` is the callback function containing the side-effect logic. `useEffect` executes the callback function after React has committed the changes to the screen.
 
-  `dependencies` is an optional array of dependencies. `useEffect()` executes `callback` only if the dependencies have changed between renderings.
+`dependencies` is an optional array of dependencies. `useEffect()` executes `callback` only if the dependencies have changed between renderings.
