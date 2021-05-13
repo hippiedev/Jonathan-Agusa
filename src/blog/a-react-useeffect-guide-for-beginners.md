@@ -1,6 +1,6 @@
 ---
 path: /blog/a-react-useeffect-guide-for-beginners
-date: 2021-05-13T20:30:23.952Z
+date: 2021-05-13T22:21:52.301Z
 title: A React.useEffect guide for beginners
 description: In this article, I'll be explaining what the useEffect hook is and
   how to use in your app.
@@ -20,9 +20,7 @@ useEffects takes in two arguments:
 useEffect(callback, [dependencies]);
 ```
 
-`callback` is the callback function containing the side-effect logic. `useEffect` executes the callback function after React has committed the changes to the screen.
-
-`dependencies` is an optional array of dependencies. `useEffect` executes `callback` only if the dependencies have changed between renderings.
+`callback` is the callback function containing the side-effect logic. `useEffect` executes the callback function after React has committed the changes to the screen. While `dependencies` is an optional array of dependencies. `useEffect` executes `callback` only if the dependencies have changed between renderings.
 
 ## Using the useEffect hook
 
@@ -41,7 +39,7 @@ import { useEffect } from 'react';
 
 const Example = () => {
     useEffect(() => {
-        console.log('render [Example]');
+        console.log('render [Example]'); //Runs after every render
     });
 
     return <div />;
@@ -49,3 +47,15 @@ const Example = () => {
 ```
 
 If you run this, the effect (`console.log`) is going to be executed after the component has been rendered. By default, in the absence of dependencies, useEffect runs after every render.
+
+```javascript
+import { useEffect } from 'react';
+
+function Example() {
+  useEffect(() => {
+      console.log('render [Example]'); //Runs once after initial render
+  }, []);
+}
+```
+
+Having an empty array as dependency is going to make your effect run once after each inital render. So if you run this, the effect is going to be executed after the component has been rendered.
