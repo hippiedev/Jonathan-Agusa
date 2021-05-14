@@ -199,3 +199,8 @@ function FetchEmployeesByQuery({ query }) {
 ```
 
 To run the fetch request once when the component mounts, simply indicate an empty dependencies list: `useEffect(fetchSideEffect, [])`
+
+## Conclusion
+
+* `useEffect` hook is a mechanism for making side effects in functional components. Side effects should not be caused directly in components body or `render` function, but should always be wrapped in a callback passed to `useEffect`.
+* By default `useEffect` callback (and corresponding cleanup) is ran on initial render and every rerender as well as on dismount. If you want to change that behaviour, add an array of values as a second argument to the `useEffect`. Then the effects will be ran only on mount and unmount of the component or if the values in that array changed. If you want to trigger the effects *only* on mount and unmount, simply pass an empty array.
