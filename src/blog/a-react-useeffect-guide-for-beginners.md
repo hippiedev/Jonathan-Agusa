@@ -64,7 +64,9 @@ function Example() {
 }
 ```
 
-##  Invoking side effects on componentDidMount
+##  
+
+## Invoking side effects on componentDidMount
 
 To do this, all you have to do is use an empty array dependency:
 
