@@ -44,7 +44,7 @@ export default function postTemplate({ data }) {
         <h1>{post.frontmatter.title}</h1>
         <span>{post.frontmatter.date}</span>
         <Img
-          style={{ position: "relative", marginTop: "50px", height: "250px" }}
+          style={{ position: "relative", marginTop: "50px", height: "300px", objectFit: 'cover' }}
           fluid={post.frontmatter.thumb.childImageSharp.fluid}
         />
         <div
@@ -81,3 +81,7 @@ export const postTemplateQuery = graphql`
     }
   }
 `;
+
+
+
+
