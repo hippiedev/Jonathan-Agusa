@@ -6,11 +6,11 @@ description: In this article, I'll be explaining what the useEffect hook is and
   how to use in your app.
 thumb: ../images/featured/jim.jpg
 ---
-`useEffect` hook is a very useful and powerful tool, especially when used properly. Understanding how to use it was a bit difficult for me at first, so that's the purpose of me writing this article. So Let's get started then!
+The `useEffect` hook is a very useful and powerful tool, especially when used properly. Understanding how to use it was a bit difficult for me at first, so that's the purpose of me writing this article. So Let's get started then!
 
 ## useEffect and side effects
 
-`useEffect` is basically used for handling side effects in your functional component. *But what are side effects?* Side effects are basically anything that affects something outside of the scope of the current function that's being executed. A very typical example of side effects are *API requests*.
+`useEffect` is basically for handling side effects in your functional component. *But what are side effects?* Side effects are basically anything that affects something outside of the scope of the current function that's being executed. A very typical example of side effects are *API requests*.
 
 `useEffect` hooks are used in place of lifecycle methods `componentDidMount`, `componentDidUpdate` and `componentWillUnmount`.
 
