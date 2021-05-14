@@ -1,6 +1,6 @@
 ---
 path: /blog/a-react-useeffect-guide-for-beginners
-date: 2021-05-13T22:21:52.301Z
+date: 2021-05-14T19:21:14.913Z
 title: A React.useEffect guide for beginners
 description: In this article, I'll be explaining what the useEffect hook is and
   how to use in your app.
@@ -64,8 +64,6 @@ function Example() {
 }
 ```
 
-##  
-
 ## Invoking side effects on componentDidMount
 
 To do this, all you have to do is use an empty array dependency:
@@ -89,3 +87,115 @@ function Greet({ name }) {
 `useEffect(..., [])` was supplied with an empty array as a dependencies argument. When configured in such a way, the `useEffect()` is going to execute the callback *just once*, after initial mounting.
 
 ## Invoking side effects on componentDidUpdate
+
+Each time the side-effect uses props or state values, you must indicate these values as dependencies:
+
+```javascript
+import { useEffect } from 'react';
+
+function MyComponent({ prop }) {
+  const [state, setState] = useState();
+
+  useEffect(() => {
+    // Side-effect uses `prop` and `state`
+  }, [prop, state]);
+
+  return <div>....</div>;
+}
+```
+
+The `useEffect(callback, [prop, state])` invokes the `callback` after the changes are being committed to DOM and *if and only if* any value in the dependencies array `[prop, state]` has changed.
+
+Using the dependencies argument of `useEffect()` you control when to invoke the side-effect, independently from the rendering cycles of the component. Again, *that’s the essence of `useEffect()` hook.*
+
+Let’s improve the `Greet` component by using `name` prop in the document title:
+
+```javascript
+import { useEffect } from 'react';
+
+function Greet({ name }) {
+  const message = `Hello, ${name}!`;
+
+  useEffect(() => {
+    document.title = `Greetings to ${name}`; 
+  }, [name]);
+
+  return <div>{message}</div>;
+}
+```
+
+`name` prop is mentioned in the dependencies argument of `useEffect(..., [name])`. `useEffect()` hook runs the side-effect after initial rendering, and on later renderings only if the `name` value changes.
+
+```javascript
+// First render
+<Greet name="Eric" />   // Side-effect RUNS
+
+// Second render, name prop changes
+<Greet name="Stan" />   // Side-effect RUNS
+
+// Third render, name prop doesn't change
+<Greet name="Stan" />   // Side-effect does NOT RUN
+
+// Fourth render, name prop changes
+<Greet name="Butters"/> // Side-effect RUNS
+```
+
+
+
+
+
+## Fetching data
+
+`useEffect()` can perform data fetching side-effect.
+
+The following component `FetchEmployeesByQuery` fetches the employees list over the network. The `query` prop filters the fetched employees:
+
+```javascript
+import { useEffect, useState } from 'react';
+
+function FetchEmployeesByQuery({ query }) {
+  const [employees, setEmployees] = useState([]);
+
+  useEffect(() => {
+    async function fetchEmployees() {
+      const response = await fetch(
+        `/employees?q=${encodeURIComponent(query)}`
+      );
+      const fetchedEmployees = await response.json(response);
+      setEmployees(fetchedEmployees);
+    }
+    fetchEmployees();
+  }, [query]);
+
+  return (
+    <div>
+      {employees.map(name => <div>{name}</div>)}
+    </div>
+  );
+}
+```
+
+`useEffect()` starts a fetch request by calling `fetchEmployees()` async function after the initial mounting.
+
+When the request completes, `setEmployees(fetchedEmployees)` updates the `employees` state with the just fetched employees list.
+
+On later renderings, if the `query` prop changes, `useEffect()` hook starts a new fetch request for a new `query` value.
+
+Note that the `callback` argument of `useEffect(callback)` cannot be an `async` function. But you can always define and then invoke an `async` function inside the callback itself:
+
+```javascript
+function FetchEmployeesByQuery({ query }) {
+  const [employees, setEmployees] = useState([]);
+
+  useEffect(() => {  // <--- CANNOT be an async function
+    async function fetchEmployees() {
+      // ...
+    }
+    fetchEmployees(); // <--- But CAN invoke async functions
+  }, [query]);
+
+  // ...
+}
+```
+
+To run the fetch request once when the component mounts, simply indicate an empty dependencies list: `useEffect(fetchSideEffect, [])`
