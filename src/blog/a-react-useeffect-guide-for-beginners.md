@@ -24,15 +24,7 @@ useEffect(callback, [dependencies]);
 
 ## Using the useEffect hook
 
-Let's create a simple `Example` functional component:
-
-```javascript
-function Example() {
-  return <div/>;
-}
-```
-
-Just a plain ol' functional component. It is strictly prohibited to make side effects directly in the body of the component, so that's where `useEffect` is going to come in. For our examples, we are going to be making logs to our `console` to see when the effect is executed.
+1. This effect going to be executed after the component has been rendered. By default, in the absence of dependencies, useEffect runs after every render.
 
 ```javascript
 import { useEffect } from 'react';
@@ -46,7 +38,7 @@ const Example = () => {
 };
 ```
 
-If you run this, the effect (`console.log`) is going to be executed after the component has been rendered. By default, in the absence of dependencies, useEffect runs after every render.
+2. Having an empty array as dependency is going to make your effect run once after each inital render. So if you run this, the effect is going to be executed after the component has been rendered.
 
 ```javascript
 import { useEffect } from 'react';
@@ -58,4 +50,40 @@ function Example() {
 }
 ```
 
-Having an empty array as dependency is going to make your effect run once after each inital render. So if you run this, the effect is going to be executed after the component has been rendered.
+3. When the dependency has props or state values, the effect runs only *when there is a dependency value change*.
+
+```javascript
+import { useEffect } from 'react';
+
+function Example() {
+  useEffect(() => {
+      //Runs once after initial render
+      // and after every rendering ONLY IF `prop` or `state` changes
+      console.log('render [Example]');
+  }, [prop, state]);
+}
+```
+
+##  Invoking side effects on componentDidMount
+
+To do this, all you have to do is use an empty array dependency:
+
+```javascript
+import { useEffect } from 'react';
+
+function Greet({ name }) {
+  const message = `Hello, ${name}!`;
+
+  useEffect(() => {
+    // Runs once, after mounting
+    document.title = 'Greetings page';
+  }, []);
+
+  return <div>{message}</div>;
+}
+
+```
+
+`useEffect(..., [])` was supplied with an empty array as a dependencies argument. When configured in such a way, the `useEffect()` is going to execute the callback *just once*, after initial mounting.
+
+## Invoking side effects on componentDidUpdate
