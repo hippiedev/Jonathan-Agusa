@@ -22,12 +22,7 @@
   line-height: 28px;
   margin-top: 45px;
 }
-.Content h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.Content :is(h1, h2, h3, h4, h5, h6) {
   font-family: "Righteous";
   font-weight: normal;
   margin: 20px 0px;
